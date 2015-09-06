@@ -1,0 +1,13 @@
+The ability to look at two different versions of a file helped identify the defect by highlighting the changes from something that worked to something that didn't. It simplified the process by removing the "noise" (the unchanged material) and allowed me to focus on what changed and which was more likely to have caused the problem.
+
+Being able to look at the entire history of a file makes programmers more efficient because they can view the different changes over time (and the reason if the programmer added comments at checkin like they should). This ability allows the programmer to identify where a change occurred that is related to the area in which a problem occurred. It also makes it easier to back out changes that cause issues rather than fix issues or add functionality. Another benefit is that some systems can analyze how often a file is changed; this helps identify popular/up-to-date content or possibly files that are more prone to error and therefore being touched more often.
+
+Manually committing changes is better than automatic changes because the developer can perform those changes with the program in a known (hopefully good) state. An automatic save takes snapshots at in an unknown state, therefore it takes further effort to determine if the saved state was valuable. The benefit of an automatic save is that developers cannot forget to perform the commit, looking at some intermediate state is better than nothing (which is what you get if a developer only commits at the end).
+
+Checkin of multiple files in one commit is beneficial because it allows programmers to back out a commit all at once, rather than fighting the system trying to back out one file at a time. The one file at a time backout process is tedious and error prone.
+
+Using the git log command allows developers to see all the changes made in the repository. If the developers use good comments it simplifies the process of finding a particular change, as shown in the exercise. If comments weren't added or if the particular changes need to be viewed then the git diff command can be used. Using the full hash key for the git diff command is really tedious but using the shorthand (first six characters makes it easier).
+
+Using version control increases a developer's confidence in making changes because they know they can always go back to a known working version, identify the changes from that version to root cause an issue and then fix the issue.
+
+
